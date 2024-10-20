@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+package barinov.coffee.bean.controller.grpc;
+
+message Roasting {
+  int32 countOfBags = 1;
+  string country = 2;
+  int32 outputWeight = 3;
+  string brigadeUUID = 4;
+  string variety = 5;
+}
+
+service RoastingService {
+  rpc messageRoasting(Roasting) returns (google.protobuf.Empty);
+}
