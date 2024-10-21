@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-@SpringBootTest
+@SpringBootTest(properties = {
+        "grpc.server.port=8100"
+},
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class RoastingServiceGrpcTest {
 
     @MockBean
@@ -23,6 +26,7 @@ public class RoastingServiceGrpcTest {
 
     @Autowired
     private RoastingServiceGrpcImpl roastingServiceGrpc;
+
     File.Roasting roasting;
 
     @BeforeEach
