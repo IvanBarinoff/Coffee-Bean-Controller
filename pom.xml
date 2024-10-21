@@ -38,6 +38,7 @@
 		<protoc.version>3.24.0</protoc.version>
 		<liquibase-core.version>4.29.2</liquibase-core.version>
 		<h2.version>2.3.232</h2.version>
+		<org.springdoc.version>2.6.0</org.springdoc.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -119,6 +120,12 @@
 			<artifactId>h2</artifactId>
 			<version>${h2.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>${org.springdoc.version}</version>
 		</dependency>
 	</dependencies>
 

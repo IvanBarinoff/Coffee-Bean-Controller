@@ -1,9 +1,14 @@
 package barinov.coffee.bean.controller.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "DTO для отображения потерь зерна страны")
 public class CountryLossDTO {
 
+    @Schema(description = "Название страны")
     private String country;
 
+    @Schema(description = "Процент потери зерна")
     private double percentageOfLoss;
 
     public CountryLossDTO() {

@@ -1,10 +1,17 @@
 package barinov.coffee.bean.controller.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "DTO для отображения остатков зерна")
 public class RemainingCoffeeBeansViewDTO {
 
+    @Schema(description = "Количество мешков")
     private int countOfBags;
 
+    @Schema(description = "Сорт")
     private String variety;
+
+    @Schema(description = "Название страны")
     private String country;
 
     public RemainingCoffeeBeansViewDTO(int countOfBags, String variety, String country) {
